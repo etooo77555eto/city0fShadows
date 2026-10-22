@@ -336,7 +336,7 @@ class VehicleEntity {
             node.addChildNode(seatBack)
         }
         // Steering wheel in front of the left seat: torus ring + column.
-        let wheelGeo = SCNTorus(ringRadius: 0.13, tubeRadius: 0.03)
+        let wheelGeo = SCNTorus(ringRadius: 0.13, pipeRadius: 0.03)
         wheelGeo.materials = [interiorMat]
         let steerWheel = SCNNode(geometry: wheelGeo)
         let steerZ = cabinFrontZ - cabinLen * 0.38
@@ -530,7 +530,7 @@ class VehicleEntity {
         spot.intensity = 0
         spot.spotInnerAngle = 18
         spot.spotOuterAngle = 42
-        spot.distance = 42
+        spot.attenuationEndDistance = 42
         let spotNode = SCNNode()
         spotNode.light = spot
         spotNode.position = SCNVector3(0, 0.8, length / 2)
@@ -648,7 +648,6 @@ class VehicleEntity {
             light.type = .omni
             light.color = color
             light.intensity = 0
-            light.distance = 8
             light.attenuationStartDistance = 0.5
             light.attenuationEndDistance = 8
             let lightNode = SCNNode()
@@ -873,7 +872,7 @@ final class HelicopterEntity {
         spot.intensity = 0
         spot.spotInnerAngle = 14
         spot.spotOuterAngle = 30
-        spot.distance = 90
+        spot.attenuationEndDistance = 90
         let sNode = SCNNode()
         sNode.light = spot
         sNode.position = SCNVector3(0, -0.8, 0.6)
