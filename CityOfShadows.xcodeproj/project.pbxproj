@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B22CE0000000000000000041 /* CityOfShadowsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000012 /* CityOfShadowsApp.swift */; };
+		B22CE0000000000000000042 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000013 /* Config.swift */; };
+		B22CE0000000000000000043 /* RoadNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000014 /* RoadNetwork.swift */; };
+		B22CE0000000000000000044 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000015 /* GameState.swift */; };
+		B22CE0000000000000000045 /* StoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000016 /* StoryData.swift */; };
+		B22CE0000000000000000046 /* CityBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000017 /* CityBuilder.swift */; };
+		B22CE0000000000000000047 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000018 /* Entities.swift */; };
+		B22CE0000000000000000048 /* PoliceAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000019 /* PoliceAI.swift */; };
+		B22CE0000000000000000049 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000020 /* GameViewController.swift */; };
+		B22CE0000000000000000050 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000021 /* ContentView.swift */; };
+		B22CE0000000000000000051 /* HUDViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000022 /* HUDViews.swift */; };
+		B22CE0000000000000000052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000024 /* Assets.xcassets */; };
+		B22CE0000000000000000053 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000025 /* SoundManager.swift */; };
+		B22CE0000000000000000054 /* Textures in Resources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000026 /* Textures */; };
+		B22CE0000000000000000055 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = B22CE0000000000000000027 /* Audio */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B22CE0000000000000000011 /* CityOfShadows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityOfShadows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22CE0000000000000000012 /* CityOfShadowsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityOfShadowsApp.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000013 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000014 /* RoadNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadNetwork.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000015 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000016 /* StoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryData.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000017 /* CityBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuilder.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000018 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000019 /* PoliceAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceAI.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000020 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000021 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000022 /* HUDViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViews.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B22CE0000000000000000024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B22CE0000000000000000025 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		B22CE0000000000000000026 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
+		B22CE0000000000000000027 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B22CE0000000000000000072 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B22CE0000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				B22CE0000000000000000004 /* CityOfShadows */,
+				B22CE0000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B22CE0000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B22CE0000000000000000011 /* CityOfShadows.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B22CE0000000000000000004 /* CityOfShadows */ = {
+			isa = PBXGroup;
+			children = (
+				B22CE0000000000000000012 /* CityOfShadowsApp.swift */,
+				B22CE0000000000000000013 /* Config.swift */,
+				B22CE0000000000000000014 /* RoadNetwork.swift */,
+				B22CE0000000000000000015 /* GameState.swift */,
+				B22CE0000000000000000016 /* StoryData.swift */,
+				B22CE0000000000000000017 /* CityBuilder.swift */,
+				B22CE0000000000000000018 /* Entities.swift */,
+				B22CE0000000000000000019 /* PoliceAI.swift */,
+				B22CE0000000000000000020 /* GameViewController.swift */,
+				B22CE0000000000000000021 /* ContentView.swift */,
+				B22CE0000000000000000022 /* HUDViews.swift */,
+				B22CE0000000000000000024 /* Assets.xcassets */,
+				B22CE0000000000000000025 /* SoundManager.swift */,
+				B22CE0000000000000000026 /* Textures */,
+				B22CE0000000000000000027 /* Audio */,
+				B22CE0000000000000000023 /* Info.plist */,
+			);
+			path = CityOfShadows;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B22CE0000000000000000061 /* CityOfShadows */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B22CE0000000000000000082 /* Build configuration list for PBXNativeTarget "CityOfShadows" */;
+			buildPhases = (
+				B22CE0000000000000000071 /* Sources */,
+				B22CE0000000000000000072 /* Frameworks */,
+				B22CE0000000000000000073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CityOfShadows;
+			productName = CityOfShadows;
+			productReference = B22CE0000000000000000011 /* CityOfShadows.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B22CE0000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B22CE0000000000000000061 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = B22CE0000000000000000081 /* Build configuration list for PBXProject "CityOfShadows" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B22CE0000000000000000002;
+			productRefGroup = B22CE0000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B22CE0000000000000000061 /* CityOfShadows */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B22CE0000000000000000073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22CE0000000000000000052 /* Assets.xcassets in Resources */,
+				B22CE0000000000000000054 /* Textures in Resources */,
+				B22CE0000000000000000055 /* Audio in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B22CE0000000000000000071 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22CE0000000000000000041 /* CityOfShadowsApp.swift in Sources */,
+				B22CE0000000000000000042 /* Config.swift in Sources */,
+				B22CE0000000000000000043 /* RoadNetwork.swift in Sources */,
+				B22CE0000000000000000044 /* GameState.swift in Sources */,
+				B22CE0000000000000000045 /* StoryData.swift in Sources */,
+				B22CE0000000000000000046 /* CityBuilder.swift in Sources */,
+				B22CE0000000000000000047 /* Entities.swift in Sources */,
+				B22CE0000000000000000048 /* PoliceAI.swift in Sources */,
+				B22CE0000000000000000049 /* GameViewController.swift in Sources */,
+				B22CE0000000000000000050 /* ContentView.swift in Sources */,
+				B22CE0000000000000000051 /* HUDViews.swift in Sources */,
+				B22CE0000000000000000053 /* SoundManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B22CE0000000000000000091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		B22CE0000000000000000092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Release;
+		};
+		B22CE0000000000000000093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CityOfShadows/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etoo.cityofshadows;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B22CE0000000000000000094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CityOfShadows/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etoo.cityofshadows;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B22CE0000000000000000081 /* Build configuration list for PBXProject "CityOfShadows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B22CE0000000000000000091 /* Debug */,
+				B22CE0000000000000000092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B22CE0000000000000000082 /* Build configuration list for PBXNativeTarget "CityOfShadows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B22CE0000000000000000093 /* Debug */,
+				B22CE0000000000000000094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B22CE0000000000000000001 /* Project object */;
+}

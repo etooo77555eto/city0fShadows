@@ -1,0 +1,46 @@
+name: Build CityOfShadows IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate textures and audio
+        run: |
+          pip3 install --quiet --break-system-packages pillow
+          python3 tools/generate_textures.py
+          python3 tools/generate_audio.py
+
+      - name: Generate app icon
+        run: |
+          pip3 install --quiet --break-system-packages pillow
+          python3 tools/generate_icon.py
+
+      - name: Build unsigned app
+        run: |
+          xcodebuild -project CityOfShadows.xcodeproj \
+            -scheme CityOfShadows \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath "$PWD/build" \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            build
+
+      - name: Package IPA
+        run: |
+          mkdir -p Payload
+          cp -R build/Build/Products/Release-iphoneos/CityOfShadows.app Payload/
+          zip -qry CityOfShadows.ipa Payload
+          ls -lh CityOfShadows.ipa
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: CityOfShadows-IPA
+          path: CityOfShadows.ipa
