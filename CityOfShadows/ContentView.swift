@@ -469,7 +469,7 @@ struct DialogueView: View {
 struct PanelShell<Content: View>: View {
     @EnvironmentObject var state: GameState
     let title: String
-    let content: () -> Content
+    @ViewBuilder let content: () -> Content
 
     var body: some View {
         VStack(spacing: 0) {
