@@ -2205,44 +2205,44 @@ final class GameViewController: UIViewController, SCNSceneRendererDelegate {
         // into their textures; a gentle emissive tint sells the night look).
         if isNight {
             for m in city.facadeMaterials {
-                m.emissive.contents = UIColor(red: 0.20, green: 0.15, blue: 0.06, alpha: 1)
+                m.emission.contents = UIColor(red: 0.20, green: 0.15, blue: 0.06, alpha: 1)
             }
-            city.shopGlowMaterial.emissive.contents = UIColor(red: 0.15, green: 0.35, blue: 0.55, alpha: 1)
+            city.shopGlowMaterial.emission.contents = UIColor(red: 0.15, green: 0.35, blue: 0.55, alpha: 1)
             // Phase 1 — neon signs blaze, windows glow warm, billboards backlit.
             for (i, m) in city.neonMaterials.enumerated() {
                 if i < city.neonNightColors.count {
-                    m.emissive.contents = city.neonNightColors[i]
+                    m.emission.contents = city.neonNightColors[i]
                 }
             }
             for m in city.windowLitMaterials {
-                m.emissive.contents = UIColor(red: 1.0, green: 0.72, blue: 0.35, alpha: 1)
+                m.emission.contents = UIColor(red: 1.0, green: 0.72, blue: 0.35, alpha: 1)
             }
-            city.billboardMaterial.emissive.contents = UIColor(white: 0.55, alpha: 1)
+            city.billboardMaterial.emission.contents = UIColor(white: 0.55, alpha: 1)
         } else {
             for m in city.facadeMaterials {
-                m.emissive.contents = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1)
+                m.emission.contents = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1)
             }
-            city.shopGlowMaterial.emissive.contents = UIColor(red: 0.04, green: 0.08, blue: 0.12, alpha: 1)
+            city.shopGlowMaterial.emission.contents = UIColor(red: 0.04, green: 0.08, blue: 0.12, alpha: 1)
             // Phase 1 — neon signs and windows go dim; billboards unlit.
             for (i, m) in city.neonMaterials.enumerated() {
                 if i < city.neonDayColors.count {
-                    m.emissive.contents = city.neonDayColors[i]
+                    m.emission.contents = city.neonDayColors[i]
                 }
             }
             for m in city.windowLitMaterials {
-                m.emissive.contents = UIColor(red: 0.04, green: 0.05, blue: 0.07, alpha: 1)
+                m.emission.contents = UIColor(red: 0.04, green: 0.05, blue: 0.07, alpha: 1)
             }
-            city.billboardMaterial.emissive.contents = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1)
+            city.billboardMaterial.emission.contents = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1)
         }
         // Traffic light materials follow the global phase.
         lightPhase += Double(dt)
         let phase = lightPhase.truncatingRemainder(dividingBy: 16)
         if phase < 8 {
-            city.trafficGreenMaterial.emissive.contents = UIColor(red: 0.1, green: 0.9, blue: 0.25, alpha: 1)
-            city.trafficRedMaterial.emissive.contents = UIColor(red: 0.35, green: 0.03, blue: 0.03, alpha: 1)
+            city.trafficGreenMaterial.emission.contents = UIColor(red: 0.1, green: 0.9, blue: 0.25, alpha: 1)
+            city.trafficRedMaterial.emission.contents = UIColor(red: 0.35, green: 0.03, blue: 0.03, alpha: 1)
         } else {
-            city.trafficGreenMaterial.emissive.contents = UIColor(red: 0.03, green: 0.3, blue: 0.08, alpha: 1)
-            city.trafficRedMaterial.emissive.contents = UIColor(red: 0.95, green: 0.08, blue: 0.08, alpha: 1)
+            city.trafficGreenMaterial.emission.contents = UIColor(red: 0.03, green: 0.3, blue: 0.08, alpha: 1)
+            city.trafficRedMaterial.emission.contents = UIColor(red: 0.95, green: 0.08, blue: 0.08, alpha: 1)
         }
         // Fog & rain & wet roads.
         if weather == .fog {
@@ -2327,7 +2327,7 @@ final class GameViewController: UIViewController, SCNSceneRendererDelegate {
         camPos.y += (finalPos.y - camPos.y) * blend
         camPos.z += (finalPos.z - camPos.z) * blend
         cameraNode.position = camPos
-        cameraNode.lookAt(SCNVector3(target.x, target.y + 1.5, target.z))
+        cameraNode.look(at: SCNVector3(target.x, target.y + 1.5, target.z))
     }
 
     // MARK: - HUD sync & life events

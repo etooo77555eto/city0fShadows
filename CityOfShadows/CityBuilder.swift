@@ -157,7 +157,7 @@ enum CityBuilder {
         TextureLoader.apply(to: billboardMat, texture: "billboard",
                             fallback: UIColor(red: 0.12, green: 0.10, blue: 0.20, alpha: 1))
         billboardMat.isDoubleSided = true
-        billboardMat.emissive.contents = UIColor(white: 0.45, alpha: 1)
+        billboardMat.emission.contents = UIColor(white: 0.45, alpha: 1)
 
         // Ground slab
         let groundGeo = SCNPlane(width: 340, height: 340)
@@ -311,7 +311,7 @@ enum CityBuilder {
                     geo.materials = [districtMats[district]]
                     let b = SCNNode(geometry: geo)
                     b.position = SCNVector3(bx, height / 2, bz)
-                    b.castShadow = true
+                    b.castsShadow = true
                     root.addChildNode(b)
                     if district == 1 {
                         // Emissive shop front at street level.

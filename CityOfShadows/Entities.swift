@@ -12,7 +12,7 @@ enum NodeFactory {
         let m = SCNMaterial()
         m.diffuse.contents = color
         if let e = emissive {
-            m.emissive.contents = e
+            m.emission.contents = e
         }
         m.isDoubleSided = false
         return m
@@ -28,7 +28,7 @@ enum NodeFactory {
         m.metalness.contents = NSNumber(value: metalness)
         m.roughness.contents = NSNumber(value: roughness)
         if let e = emissive {
-            m.emissive.contents = e
+            m.emission.contents = e
         }
         m.isDoubleSided = false
         return m
@@ -101,7 +101,7 @@ final class HumanoidFigure {
         torsoGeo.materials = [torsoMaterial]
         let torso = SCNNode(geometry: torsoGeo)
         torso.position = SCNVector3(0, 1.29, 0)
-        torso.castShadow = true
+        torso.castsShadow = true
 
         // Head
         let headGeo = SCNSphere(radius: 0.16)
@@ -278,7 +278,7 @@ class VehicleEntity {
         bodyGeo.materials = [bodyMaterial]
         let body = SCNNode(geometry: bodyGeo)
         body.position = SCNVector3(0, bodyY, 0)
-        body.castShadow = true
+        body.castsShadow = true
         node.addChildNode(body)
 
         var cabinH: Float = 0.5
@@ -301,7 +301,7 @@ class VehicleEntity {
         cabinGeo.materials = [glassMat]
         let cabin = SCNNode(geometry: cabinGeo)
         cabin.position = SCNVector3(0, cabinY, cabinZ)
-        cabin.castShadow = true
+        cabin.castsShadow = true
         node.addChildNode(cabin)
 
         // Simple interior cabin (every car): dashboard, two seats and a
@@ -610,7 +610,7 @@ class VehicleEntity {
         let glowGeo = SCNPlane(width: 1.7, height: CGFloat(length * 0.8))
         let glowMat = SCNMaterial()
         glowMat.diffuse.contents = UIColor.black
-        glowMat.emissive.contents = UIColor.white
+        glowMat.emission.contents = UIColor.white
         glowGeo.materials = [glowMat]
         let glowNode = SCNNode(geometry: glowGeo)
         glowNode.eulerAngles.x = -Float.pi / 2
@@ -641,7 +641,7 @@ class VehicleEntity {
         }
         let color = NeonColors.color(at: index - 1)
         if let mat = underglowMaterial {
-            mat.emissive.contents = color
+            mat.emission.contents = color
         }
         if underglowLightNode == nil {
             let light = SCNLight()
@@ -787,11 +787,11 @@ final class PoliceCarEntity: VehicleEntity {
         sirenPhase += dt * 6
         let on = sin(sirenPhase) > 0
         if active {
-            redMaterial.emissive.contents = on ? UIColor.red : UIColor(red: 0.25, green: 0.02, blue: 0.02, alpha: 1)
-            blueMaterial.emissive.contents = on ? UIColor(red: 0.2, green: 0.4, blue: 1, alpha: 1) : UIColor.blue
+            redMaterial.emission.contents = on ? UIColor.red : UIColor(red: 0.25, green: 0.02, blue: 0.02, alpha: 1)
+            blueMaterial.emission.contents = on ? UIColor(red: 0.2, green: 0.4, blue: 1, alpha: 1) : UIColor.blue
         } else {
-            redMaterial.emissive.contents = UIColor(red: 0.3, green: 0.03, blue: 0.03, alpha: 1)
-            blueMaterial.emissive.contents = UIColor(red: 0.03, green: 0.05, blue: 0.35, alpha: 1)
+            redMaterial.emission.contents = UIColor(red: 0.3, green: 0.03, blue: 0.03, alpha: 1)
+            blueMaterial.emission.contents = UIColor(red: 0.03, green: 0.05, blue: 0.35, alpha: 1)
         }
     }
 }
